@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>report-page</title>
+</head>
+<body>
+    
+    
+    
+    <% if (main === "50n" || main === "50d") { %>
+        <video src="css/Images/atmosphere.mp4" muted loop autoplay class="hero-bg"></video>
+    <% } %> 
+    
+    <% if (main === "11n" || main==="11d") { %>
+        <video src="css/Images/thunderstorm.mp4" muted loop autoplay class="hero-bg"></video>
+    <% } %>
+
+    <% if (main === "10n" || main==="10d") { %>
+        <video src="css/Images/rain.mp4" muted loop autoplay class="hero-bg"></video>
+    <% } %>
+
+    <% if (main === "09n" || main==="09d") { %>
+        <video src="css/Images/drizzle.mp4" muted loop autoplay class="hero-bg"></video>
+    <% } %>
+
+    <% if (main === "13n" || main === "13d") { %>
+        <video src="css/Images/snow.mp4" muted loop autoplay class="hero-bg"></video>
+    <% } %>
+
+    <% if (main === "01n" || main === "01d") { %>
+        <video src="css/Images/clear.mp4" muted loop autoplay class="hero-bg"></video>
+    <% } %>
+
+    <% if (main === "02n" || main === "02d" || main === "03n" || main === "03d" || main === "04n" || main === "04d") { %>
+        <video src="css/Images/clouds.mp4" muted loop autoplay class="hero-bg"></video>
+    <% } %>
+
+    <h1>The temperature in <%= nameOfPlace %> is <%= tempOfPlace %> degree celcius</h1>
+    <p>Weather Condition : <%= type %></p>
+
+    <form action="/report" method="post">
+        <button type="submit" name="button">👈</button>
+    </form>
+       
+</body>
+</html>
